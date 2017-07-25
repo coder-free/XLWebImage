@@ -17,17 +17,17 @@ Pod::Spec.new do |s|
 
   s.name         = "XLWebImage"
   s.version      = "1.0.0"
-  s.summary      = "A short description of XLWebImage."
+  s.summary      = "XLWebImage."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  # s.description  = <<-DESC
+  #                    DESC
 
-  s.homepage     = "http://EXAMPLE/XLWebImage"
+  s.homepage     = "https://github.com/zfavourite99/XLWebImage"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -64,10 +64,10 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/XLWebImage.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/zfavourite99/XLWebImage.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +90,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
-
-  # s.public_header_files = "Classes/**/*.h"
+  s.source_files  = "XLWebImage", "XLWebImage/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
+  s.public_header_files = "XLWebImage/XLWebImage.h", "XLWebImage/XLWebImage/XLWebImageCommon.h", "XLWebImage/XLWebImage/XLImageCache.h", "XLWebImage/XLWebImage/XLImageClient.h", "XLWebImage/XLWebImage/UIImageView+XLWebLoad.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -118,7 +117,7 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
-
+    s.ios.vendored_frameworks = 'XLWebImage/M13Progress/M13ProgressSuite.framework'
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
@@ -129,9 +128,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  # s.dependency "M13ProgressSuite", "~> 1.2.9"
 
 end
