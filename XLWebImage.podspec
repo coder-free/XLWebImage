@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XLWebImage"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "XLWebImage."
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "XLWebImage", "XLWebImage/**/*.{h,m}"
+  s.source_files  = "XLWebImage/FastImageCache/**/*.{h,m}", "XLWebImage/XLWebImage/**/*.{h,m}", "XLWebImage/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   s.public_header_files = "XLWebImage/XLWebImage.h", "XLWebImage/XLWebImage/XLWebImageCommon.h", "XLWebImage/XLWebImage/XLImageCache.h", "XLWebImage/XLWebImage/XLImageClient.h", "XLWebImage/XLWebImage/UIImageView+XLWebLoad.h"
 
